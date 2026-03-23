@@ -23,9 +23,8 @@ To match the structure of the paper, this repository contains two benchmark-syst
 ├─ 4bus/
 │  ├─ 4bus_model.slx
 │  ├─ transient_data.mat
-│  ├─ run_era.m
-│  ├─ identified_impedance.mat
-│  ├─ source_dataset.mat
+│  ├─ era and identified_impedance.m
+│  ├─ source_dataset.csv
 │  ├─ train_pinn.py
 │  ├─ trained_model.pt
 │  ├─ compute_ard_api.m
