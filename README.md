@@ -100,7 +100,7 @@ If you use this repository in your research, please cite:
 ```bibtex
 @article{zhen_ard_api_pes,
   title   = {Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain},
-  author  = {Hongwei Zhen and Ze Yu and Mingyang Sun},
+  author  = {Zhen, Hongwei and Yu, Ze and Xiang, Xin and Li, Wuhua and He, Xiangning and Sun, Mingyang},
   journal = {IEEE Transactions on Power Electronics},
   note    = {submitted}
 }
