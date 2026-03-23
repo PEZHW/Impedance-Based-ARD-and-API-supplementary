@@ -1,39 +1,112 @@
-# Supplementary Materials for  
-**Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain**
+# Repository for “Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”
 
-This repository provides supplementary materials for the above IEEE TPEL Letter.  
-It is intended as a lightweight companion repository to support the reported case studies, due to the space limitation of the Letter format.
+This repository provides the supplementary models, codes, datasets, and result files associated with the paper:
 
-The repository includes:
+**“Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”**
 
-- Simulink models of the 4-bus benchmark system and the modified IEEE 39-bus system
-- Detailed parameter files for system configuration, VSG-controlled IBRs, and attack settings
-- Processed impedance-identification results used for surrogate construction
-- Processed surrogate-model outputs and representative inference results
-- Source data for the main figures and tables in the paper
-- Selected plotting and post-processing scripts for reproducing the reported results
+## Overview
 
-This repository is **not** a full release of the complete end-to-end workflow.  
-In particular, large-scale simulation pipelines, full training code, and all intermediate files are not included unless explicitly noted.  
-Instead, the goal is to provide the model files, key parameters, and processed results necessary to understand and verify the main claims of the paper.
+This repository supports the reproducibility of the workflow materials and benchmark-study results reported in the paper.
+
+The paper develops an impedance-based Attack Reachable Domain (ARD) framework and the corresponding Attack Penetration Index (API) for attacker-oriented cyber-vulnerability assessment in power electronic systems. It also discusses a practical gray-box workflow based on impedance identification and differentiable surrogate tools.
+
+To match the structure of the paper, this repository contains two benchmark-system packages:
+
+- a **4-bus package**, including representative workflow materials and benchmark-study results;
+- a **39-bus package**, including system-level ARD/API evaluation and representative attack-validation results.
 
 ## Repository Structure
 
-- `models/`: Simulink models and initialization files
-- `parameters/`: detailed parameter settings and representative attack cases
-- `impedance_identification/`: processed impedance-identification data
-- `surrogate_results/`: trained surrogate artifacts and example outputs
-- `paper_results/`: source data corresponding to figures and tables in the paper
-- `scripts/`: selected scripts for plotting and post-processing
+```text
+.
+├─ README.md
+├─ 4bus/
+│  ├─ 4bus_model.slx
+│  ├─ transient_data.mat
+│  ├─ run_era.m
+│  ├─ identified_impedance.mat
+│  ├─ source_dataset.mat
+│  ├─ train_pinn.py
+│  ├─ trained_model.pt
+│  ├─ compute_ard_api.m
+│  ├─ table1_results.csv
+│  ├─ fig3_fig4_data.mat
+│  └─ worst_case_validation.mat
+├─ 39bus/
+│  ├─ 39bus_model.slx
+│  ├─ compute_ard_api.m
+│  ├─ table2_results.csv
+│  ├─ fig5_data.mat
+│  └─ validation_cases.mat
+└─ supplementary/
+   ├─ workflow_note.md
+   └─ data_dictionary.md
+````
 
-## Relation to the Paper
+## 4-bus Package
 
-This repository supports the results reported in:
+The `4bus/` folder contains:
 
-- Fig. 3: ARDs of the two dominant modes in the 4-bus system
-- Table I: API values of the 4-bus case
-- Fig. 4: time-domain validation in the 4-bus system
-- Table II: MISCR, IMR, and API values in the modified IEEE 39-bus system
-- Fig. 5: time-domain validation of bus-level vulnerability ranking
+* the Simulink model of the 4-bus benchmark system;
+* representative disturbance-generated transient data;
+* ERA-based impedance-identification code and results;
+* source dataset and PINN surrogate-training materials;
+* ARD/API computation results for the reported 4-bus case;
+* worst-case attack validation results corresponding to the reported study.
 
-For questions regarding unavailable intermediate materials, please refer to the manuscript for methodological details and to the processed results provided here.
+This package is intended to support the 4-bus case study in the paper, where the ARDs of two dominant modes are compared under operating-point manipulation, control-parameter tampering, and coordinated joint manipulation.
+
+## 39-bus Package
+
+The `39bus/` folder contains:
+
+* the Simulink model of the modified IEEE 39-bus system;
+* ARD/API evaluation results for the IBR buses;
+* representative time-domain validation cases.
+
+This package is intended to support the 39-bus case study in the paper, which demonstrates bus-level cyber-vulnerability ranking in a larger inverter-dominated system.
+
+## Scope of This Repository
+
+This repository is intended to provide:
+
+* supplementary implementation materials for the proposed workflow;
+* benchmark-system result files corresponding to the reported ARD/API studies;
+* representative data and code for impedance identification and surrogate preparation.
+
+It is not intended to include every intermediate development asset used during the research process.
+
+## Notes
+
+The repository includes both workflow-related materials and benchmark-study results.
+
+For the 4-bus case, the repository contains representative materials for:
+
+* disturbance generation,
+* impedance identification,
+* surrogate preparation,
+* ARD/API evaluation,
+* worst-case attack validation.
+
+For the 39-bus case, the repository focuses on:
+
+* benchmark-system ARD/API evaluation,
+* bus-level vulnerability comparison,
+* representative attack-validation results.
+
+## Citation
+
+If you use this repository in your research, please cite:
+
+```bibtex
+@article{zhen_ard_api_pes,
+  title   = {Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain},
+  author  = {Hongwei Zhen and Ze Yu and Mingyang Sun},
+  journal = {IEEE Transactions on Power Electronics},
+  note    = {submitted}
+}
+```
+
+## Contact
+
+For questions regarding this repository, please contact the authors through the corresponding paper information.
