@@ -1,4 +1,4 @@
-<img width="2175" height="1182" alt="ARD" src="https://github.com/user-attachments/assets/1573e231-eb87-4d6d-84d3-9c207c2d0dab" /><img width="2175" height="1182" alt="ARD" src="https://github.com/user-attachments/assets/fb4be997-8d0e-44f4-9ef0-7b413b4b3e2b" /># Repository for “Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”
+# Repository for “Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”
 
 This repository provides the supplementary models, codes, datasets, and result files associated with the paper:
 
