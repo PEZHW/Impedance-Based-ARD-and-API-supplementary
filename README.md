@@ -1,97 +1,70 @@
 # Repository for “Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”
 
-This repository provides the supplementary models, codes, datasets, and result files associated with the paper:
+This repository provides supplementary models, scripts, datasets, and result files associated with the paper:
 
 **“Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”**
 
 ## Overview
 
-This repository supports the reproducibility of the workflow materials and benchmark-study results reported in the paper.
+This repository is organized as a compact supplementary package for the paper.
 
-The paper develops an impedance-based Attack Reachable Domain (ARD) framework and the corresponding Attack Penetration Index (API) for attacker-oriented cyber-vulnerability assessment in power electronic systems. It also discusses a practical gray-box workflow based on impedance identification and differentiable surrogate tools.
+It includes:
 
-To match the structure of the paper, this repository contains two benchmark-system packages:
+- representative materials for the practical gray-box route discussed in the paper;
+- reported benchmark result files for the 4-bus and 39-bus case studies.
 
-- a **4-bus package**, including representative workflow materials and benchmark-study results;
-- a **39-bus package**, including system-level ARD/API evaluation and representative attack-validation results.
-
-## Repository Structure
+## Structure
 
 ```text
 .
 ├─ README.md
 ├─ 4bus/
+│  ├─ 4busREADME.md
 │  ├─ era_example/
-│  │  ├─ x4bus_model.slx
-│  │  ├─ run_ERA_ImpedanceI_dentification.m
-│  │  ├─ era_algo.m
-│  │  ├─ vi_dq1.mat
-│  │  ├─ vi_dq2.mat
-│  │  └─  Impedence_Identification.png
 │  ├─ Surrogate_example/
-│  │  ├─ IBR1_General_Admittance_Dataset.csv
-│  │  ├─ SurrogateTrainCode.py
-│  │  ├─ best_model.pth
-│  │  ├─ condition_prediction.svg
-│  │  └─  training_history.png
-│  ├─ paper_results/
-│  │  ├─ ARD.png
-│  │  └─ 4BusScope.png
+│  └─ results/
 └─ 39bus/
-│  ├─ x39bus_model.slx
-│  └─ 39BusScope.png
-````
+   ├─ 39busREADME.md
+   ├─ system_parameters.md
+   ├─ bus_strength_api.csv
+   └─ 39BusScope.png
+```
 
-## 4-bus Package
+## 4-Bus Package
 
-The `4bus/` folder contains:
+The `4bus/` folder serves two purposes:
 
-* the Simulink model of the 4-bus benchmark system;
-* representative disturbance-generated transient data;
-* ERA-based impedance-identification code and results;
-* source dataset and PINN surrogate-training materials;
-* ARD/API computation results for the reported 4-bus case;
-* worst-case attack validation results corresponding to the reported study.
+- to illustrate the practical gray-box route used in the paper;
+- to provide the reported 4-bus result files.
 
-This package is intended to support the 4-bus case study in the paper, where the ARDs of two dominant modes are compared under operating-point manipulation, control-parameter tampering, and coordinated joint manipulation.
+In particular:
 
-## 39-bus Package
+- `era_example/` shows a representative disturbance-based impedance-identification example;
+- `Surrogate_example/` shows a representative surrogate-model example for IBR1;
+- `results/` stores the reported 4-bus ARD and time-domain validation figures.
 
-The `39bus/` folder contains:
+See `4bus/4busREADME.md` for a compact description of the workflow.
 
-* the Simulink model of the modified IEEE 39-bus system;
-* ARD/API evaluation results for the IBR buses;
-* representative time-domain validation cases.
+## 39-Bus Package
 
-This package is intended to support the 39-bus case study in the paper, which demonstrates bus-level cyber-vulnerability ranking in a larger inverter-dominated system.
+The `39bus/` folder focuses on the reported 39-bus study.
 
-## Scope of This Repository
+It contains:
+
+- `39busREADME.md` for a brief description of the 39-bus package;
+- `system_parameters.md` for the main synchronous-generator and GFM-IBR parameter summary;
+- `bus_strength_api.csv` for the reported bus-level MISCR, IMR, and API results;
+- `39BusScope.png` for the representative time-domain validation figure.
+
+## Scope
 
 This repository is intended to provide:
 
-* supplementary implementation materials for the proposed workflow;
-* benchmark-system result files corresponding to the reported ARD/API studies;
-* representative data and code for impedance identification and surrogate preparation.
+- representative workflow materials for the practical gray-box setting;
+- benchmark-system result files corresponding to the reported studies;
+- supplementary code/data that help readers understand the reported pipeline.
 
 It is not intended to include every intermediate development asset used during the research process.
-
-## Notes
-
-The repository includes both workflow-related materials and benchmark-study results.
-
-For the 4-bus case, the repository contains representative materials for:
-
-* disturbance generation,
-* impedance identification,
-* surrogate preparation,
-* ARD/API evaluation,
-* worst-case attack validation.
-
-For the 39-bus case, the repository focuses on:
-
-* benchmark-system ARD/API evaluation,
-* bus-level vulnerability comparison,
-* representative attack-validation results.
 
 ## Citation
 
