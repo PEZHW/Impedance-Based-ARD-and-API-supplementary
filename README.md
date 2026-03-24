@@ -98,7 +98,7 @@ For the 39-bus case, the repository focuses on:
 If you use this repository in your research, please cite:
 
 ```bibtex
-@article{zhen_ard_api_pes,
+@article{zhen2026ard,
   title   = {Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain},
   author  = {Zhen, Hongwei and Yu, Ze and Xiang, Xin and Li, Wuhua and He, Xiangning and Sun, Mingyang},
   journal = {IEEE Transactions on Power Electronics},
