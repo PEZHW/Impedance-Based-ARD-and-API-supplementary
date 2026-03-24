@@ -1,4 +1,4 @@
-# Repository for “Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”
+<img width="2175" height="1182" alt="ARD" src="https://github.com/user-attachments/assets/1573e231-eb87-4d6d-84d3-9c207c2d0dab" /><img width="2175" height="1182" alt="ARD" src="https://github.com/user-attachments/assets/fb4be997-8d0e-44f4-9ef0-7b413b4b3e2b" /># Repository for “Quantifying Cyber-Vulnerability in Power Electronic Systems via an Impedance-Based Attack Reachable Domain”
 
 This repository provides the supplementary models, codes, datasets, and result files associated with the paper:
 
@@ -21,25 +21,25 @@ To match the structure of the paper, this repository contains two benchmark-syst
 .
 ├─ README.md
 ├─ 4bus/
-│  ├─ 4bus_model.slx
-│  ├─ transient_data.mat
-│  ├─ era and identified_impedance.m
-│  ├─ source_dataset.csv
-│  ├─ train_pinn.py
-│  ├─ trained_model.pt
-│  ├─ compute_ard_api.m
-│  ├─ table1_results.csv
-│  ├─ fig3_fig4_data.mat
-│  └─ worst_case_validation.mat
-├─ 39bus/
-│  ├─ 39bus_model.slx
-│  ├─ compute_ard_api.m
-│  ├─ table2_results.csv
-│  ├─ fig5_data.mat
-│  └─ validation_cases.mat
-└─ supplementary/
-   ├─ workflow_note.md
-   └─ data_dictionary.md
+│  ├─ era_example/
+│  │  ├─ x4bus_model.slx
+│  │  ├─ run_ERA_ImpedanceI_dentification.m
+│  │  ├─ era_algo.m
+│  │  ├─ vi_dq1.mat
+│  │  ├─ vi_dq2.mat
+│  │  └─  Impedence_Identification.png
+│  ├─ Surrogate_example/
+│  │  ├─ IBR1_General_Admittance_Dataset.csv
+│  │  ├─ SurrogateTrainCode.py
+│  │  ├─ best_model.pth
+│  │  ├─ condition_prediction.svg
+│  │  └─  training_history.png
+│  ├─ paper_results/
+│  │  ├─ ARD.png
+│  │  └─ 4BusScope.png
+└─ 39bus/
+│  ├─ x39bus_model.slx
+│  └─ 39BusScope.png
 ````
 
 ## 4-bus Package
